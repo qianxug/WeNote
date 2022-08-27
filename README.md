@@ -1,0 +1,1 @@
+# technova-lecture-note-sharer
