@@ -1,5 +1,13 @@
 {% extends 'lectures/base.html' %}
 
+{% if title %}
+<title>NoteShare - {{ title }}</title>
+
+{% else %}
+<title>NoteShare</title>
+
+{% endif %}
+
 {% block content %}
-    <h1>This is index.html</h1>
+    <h1>hi This is index.html</h1>
 {% endblock %}

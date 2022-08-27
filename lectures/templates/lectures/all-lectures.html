@@ -2,7 +2,7 @@
 
 {% block content %}
     {% for i in selectedLecture %}
-        <h1>{{ i.name }}</h1>
+        <a href="/lectures/1/">{{ i.name }}</a>
         <p>{{ i.description }}</p>
     {% endfor %}
 {% endblock %}
