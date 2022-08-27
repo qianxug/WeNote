@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect 
 from lectures.models import *
+from .forms import NoteUploadForm
 from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
 # import logging
@@ -26,6 +27,13 @@ def showOneLecture(request, lecID):
     }
     return render(request, 'lectures/lecture-template.html', context)
 
+def showAllNotes(request):
+    selectedNote = Note.objects.all()
+    context = {
+        'selectedNote': selectedNote
+    }
+    return render(request, 'lectures/all-notes.html', context)
+
 def upload(request):
     if request.method == 'POST':
         uploadedFile = request.FILES['document']
@@ -36,3 +44,20 @@ def upload(request):
         fs.save(uploadedFile.name, uploadedFile)
         # return HttpResponse('yo')
     return render(request, 'lectures/upload.html')
+
+def uploadNote(request):
+    if request.method == "POST":
+        form = NoteUploadForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            form.save()
+            return redirect('/lectures/')
+        
+        else:
+            form = NoteUploadForm()
+
+    form = NoteUploadForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'lectures/upload-note.html', context)
