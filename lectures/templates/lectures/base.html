@@ -1,10 +1,37 @@
+{% load static %}
 <!DOCTYPE html>
+
 <html>
-    <head></head>
-    <body>
-        <div>
-            {% block content %}{% endblock %}
-        </div>
-        
-    </body>
+<head>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'lectures/main.css' %}">
+
+    {% if title %}
+        <title>NoteShare - {{ title }}</title>
+    {% else %}
+        <title>NoteShare</title>
+    {% endif %}
+</head>
+
+<body>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+  <div class="rectangle"></div> 
+
+  <div class="sidenav">
+    <span class="profilecircle">
+      <p style="color: rgba(98, 121, 184, 0.98); text-align: center; font-size: 43px">AA</p>
+    </span>
+    <p style="color: white;text-align: center; font-size: 38px"> My Courses </p>
+    <a style = "text-decoration-line: underline"href="#math135">Math 135 - Sec 001</a>
+    <a href="#math137">Math 137 - Sec 003</a>
+    <a href="#cs135">CS 135 - Sec 002</a>
+    <a href="#phys111">Phys 111 - Sec 001</a>
+    <a href="#engl109">Engl 109 - Sec 001</a>
+  </div>
+</body>
 </html>
