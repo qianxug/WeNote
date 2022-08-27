@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+            <title>NoteShare - {{ title }}</title>
+        
+        {% else %}
+            <title>NoteShare</title>
+        
+        {% endif %}
+
+    </head>
+    <body>
+        <div>
+            {% block content %}{% endblock %}
+        </div>
+        
+    </body>
+</html>
