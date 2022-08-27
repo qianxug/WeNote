@@ -1,0 +1,82 @@
+body {
+  font-family: "Inter";
+}
+
+.rectangle{
+/* Side bar base rectangle */
+position: absolute;
+width: 409px;
+height: 1024px;
+left: -65px;
+top: 0px;
+
+/* Blue Color */
+background: rgba(98, 121, 184, 0.98);
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+border-radius: 56.5px;
+}
+.profilecircle{
+width: 94px;
+height: 94px;
+left: calc(50% - 94px/2 - 640px);
+top: calc(50% - 94px/2 - 424px);
+background: #ffffff;
+border-radius: 50%;
+display: inline-block;
+}
+
+.sidenav {
+position: absolute;
+width: 246px;
+height: 100%;
+left: 49px;
+top: 20px;
+
+  z-index: 1;
+  background: rgba(98, 121, 184, 0.98);
+  overflow-x: hidden;
+}
+
+.sidenav a {
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+text-align: center;
+
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  text-decoration-line: underline;
+}
+
+.card {
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+border-radius: 15px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.main {
+  margin-left: 360px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
