@@ -1,8 +1,16 @@
 {% extends 'lectures/base.html' %}
 
 {% block content %}
+    <div class="main"> 
+    <h2>Math 137 - Sec 003</h2>
+
     {% for i in selectedLecture %}
-        <a href="/lectures/1/">{{ i.name }}</a>
-        <p>{{ i.description }}</p>
+        <div class="card">
+          <div class="container">
+            <p><b>{{ i.name }} </b></p> 
+            <p style="font-size: 20px">15 notes posted</p> 
+          </div>
+        </div>
     {% endfor %}
+    </div>
 {% endblock %}
