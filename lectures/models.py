@@ -7,9 +7,13 @@ class Lecture(models.Model):
     description = models.CharField(max_length=100)
     numNotes = models.FloatField()
 
+    @property
+    def numNotesInt():
+        return int(self.numNotes)
+
 class Note(models.Model):
     name = models.CharField(max_length=50)
-    author = models.CharField(max_length=50)
+    author = models.CharField(max_length=50, default='Aurora Anhn')
     description = models.CharField(max_length=100)
     timestamp = models.DateTimeField(auto_now_add=True)
     format = models.CharField(choices=formatChoices, default='unspecified', max_length=50)

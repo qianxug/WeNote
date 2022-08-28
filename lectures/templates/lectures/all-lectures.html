@@ -7,8 +7,8 @@
     {% for i in selectedLecture %}
         <div class="card">
           <div class="container">
-            <p><b>{{ i.name }} </b></p> 
-            <p style="font-size: 20px">15 notes posted</p> 
+            <a href="/lectures/1/"><b>{{ i.name }} </b></a> 
+            <p style="font-size: 20px">{{ i.numNotes }} notes posted</p> 
           </div>
         </div>
     {% endfor %}

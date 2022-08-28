@@ -1,12 +1,14 @@
 {% extends 'lectures/base.html' %}
 
 {% block content %}
-    {% for i in selectedNote %}
-        <a href="/lectures/">Note name: {{ i.name }}</a>
-        <p>Note author: {{ i.author }}</p>
-        <p>Note description: {{ i.description }}</p>
-        <h1>Timestamp: {{ i.timestamp }}</h1>
-        <h2>Written or typed: {{ i.format }}</h2>
-        <h3>How many votes: {{ i.numVotes }}</h3>
-    {% endfor %}
+    <div class='main'>
+        {% for i in selectedNote %}
+            <h1>Note name: {{ i.name }}</a>
+            <p>Note author: {{ i.author }}</p>
+            <p>Note description: {{ i.description }}</p>
+            <h1>Timestamp: {{ i.timestamp }}</h1>
+            <h2>Written or typed: {{ i.format }}</h2>
+            <h3>How many votes: {{ i.numVotes }}</h3>
+        {% endfor %}
+    </div>
 {% endblock %}  

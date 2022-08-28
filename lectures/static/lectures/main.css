@@ -1,5 +1,35 @@
-body {
+@font-face {
   font-family: "Inter";
+  src: url(Inter-Medium.otf);
+  font-style: "normal";
+  font-weight: 100;
+}
+
+body {
+  font-family: Inter;
+}
+
+.uploadLabel {
+  color: gray;
+  font-size: 20px;
+  font-family: Inter;
+  text-align: right;
+  vertical-align: middle;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.pillButton {
+  background-color: rgba(98, 121, 184, 1);
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
 }
 
 .rectangle{
@@ -11,10 +41,11 @@ left: -65px;
 top: 0px;
 
 /* Blue Color */
-background: rgba(98, 121, 184, 0.98);
+background: rgba(98, 121, 184, 1);
 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 border-radius: 56.5px;
 }
+
 .profilecircle{
 width: 94px;
 height: 94px;
@@ -38,7 +69,7 @@ top: 20px;
 }
 
 .sidenav a {
-  font-family: 'Inter';
+font-family: Inter;
 font-style: normal;
 font-weight: 600;
 font-size: 24px;

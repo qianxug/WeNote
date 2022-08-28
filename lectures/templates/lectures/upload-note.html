@@ -1,10 +1,37 @@
 {% extends 'lectures/base.html' %}
 
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+
 {% block content %}
-    <h2>Upload a Note</h2>
-    <form method='post' enctype='multipart/form-data'>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Upload note</button>
-    </form>
+    <div class="main">
+        <h2>Math 137 - Sec 003</h2>
+        <form method='post' enctype='multipart/form-data'>
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td class="uploadLabel">
+                        <p>Title</p>
+                    </td>
+                    <td>{{form.name}}</td>
+                </tr>
+                <tr>
+                    <td class="uploadLabel">Description</td>
+                    <td>{{form.description}}</td>
+                </tr>
+                <tr class="placeholder" height="19px"></tr>
+                <tr>
+                    <td class="uploadLabel">Format</td>
+                    <td>{{form.format}}</td>
+                </tr>
+                <tr class="placeholder" height="17px"></tr>
+                <tr>
+                    <td class="uploadLabel">Add File</td>
+                    <td>{{form.pdf}}</td>
+                </tr>
+            </table>
+        <button type="submit">Post</button>
+        </form>            
+
+    </div>
 {% endblock %}  

@@ -1,0 +1,14 @@
+{% extends 'lectures/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="main">
+        <a href="/lectures/1/">Note name: {{ selectedNote.name }}</a>
+        <p>Note author: {{ selectedNote.author }}</p>
+        <p>Note description: {{ selectedNote.description }}</p>
+        <h1>Timestamp: {{ selectedNote.timestamp }}</h1>
+        <h2>Written or typed: {{ selectedNote.format }}</h2>
+        <h3>How many votes: {{ selectedNote.numVotes }}</h3>
+        <iframe src="{% static 'lectures/' %}{{selectedNote.pdf}}" width='800px' height="1000px"></iframe>
+    </div>
+{% endblock %}  
