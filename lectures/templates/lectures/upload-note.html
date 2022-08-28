@@ -5,7 +5,13 @@
 
 {% block content %}
     <div class="main">
+        <div class="cardNote">
+        <div class="container">
         <h2>Math 137 - Sec 003</h2>
+            
+             <div class="cardInnerNote">
+            <div class="container">
+            
         <form method='post' enctype='multipart/form-data'>
             {% csrf_token %}
             <table>
@@ -31,7 +37,8 @@
                 </tr>
             </table>
         <button type="submit">Post</button>
-        </form>            
+        </form>   
+                 </div></div></div></div>
 
     </div>
 {% endblock %}  
