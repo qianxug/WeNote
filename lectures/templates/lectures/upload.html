@@ -1,11 +1,21 @@
 {% extends 'lectures/base.html' %}
 
 {% block content %}
+    <div class="main">
+        
+        <div class="cardNote">
+        <div class="container">
+
     <h2>Upload</h2>
+                
+            <div class="cardInnerNote">
+            <div class="container">
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <input type="file" name="document">
         <button type="submit">Upload file</button>
     </form>
+                </div></div></div></div>
+</div>
     
 {% endblock %}
