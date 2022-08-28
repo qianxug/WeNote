@@ -1,8 +1,73 @@
 {% extends 'lectures/base.html' %}
-
 {% block content %}
-    <div class="main">
-        <h1>{{ selectedLecture.name }}</h1>
-        <p>{{ selectedLecture.description }}</p>
-    </div>
+<div class="main">
+    <!--Title-->
+    <h2>Math 137 - Sec 003</h2>
+    <!--Grey part-->
+    <div class="cardNote">
+        <div class="container">
+            <!--Title + Date + Time-->
+            <!--{{ selectedLecture.name }}-->
+            <p><b> Lecture 10 - June 1, 2022, 12:30 pm 
+                <!--Button for new post-->
+                <button class="button" style="align-self: right;"> 
+                    <!--Logo: 
+                        <img src="newPost.jpg" alt="newPost" width="22.8" height="24.14">
+                    -->
+                    Add New Post
+                </button>
+            </b></p> 
+        
+          <!--Features the search,sort,filter bar AND the for loop-->
+          <div class="cardInnerNote">
+            <div class="container">
+                <!--search, sort, filter-->
+                <div class="topnav">
+                    <!--Search bar icon-->
+                    <!--Search bar-->
+                    <input type="text" placeholder="     Search..">
+                    
+                    <!--Sort: dropdown-->
+                    <div class="dropdown">
+                        <button class="dropbtn">Sort</button>
+                        <div class="dropdown-content">
+                          <a href="#">Name</a>
+                          <a href="#">Date</a>
+                        </div>
+                    </div>
+                    <!--Filter: dropdown-->
+                    <div class="dropdown">
+                        <button class="dropbtn">Filter</button>
+                        <div class="dropdown-content">
+                          <a href="#">Typed</a>
+                          <a href="#">Handwritten</a>
+                        </div>
+                    </div>
+                </div>
+                <!--for loop-->
+                <div class="cardNoteBox">
+                    <div class="containerNoteBox" style="display: inline-block">
+                        <div class="mini">
+                            <div class="mini-txt">AA</div></div>
+                        <p><b><!--Profile--> 
+                            
+                        Viann Dodd</b></p>
+
+                        <div class="cardInnerNote">
+                            <div class="container" style="display: inline-block">
+                                <iframe src="https://s29.q4cdn.com/816090369/files/doc_downloads/test.pdf" width='190px' height="236px"></iframe>
+                            </div>
+                            <div class="container" style="display: inline-block">
+                                <!--title-->
+                                <h2 style="color: #6279B8; display: inline-block;">{{ selectedLecture.name }}</h2>
+                                <p> {{ selectedLecture.description }}</p>
+                                <button class="button">Typed</button>
+                            </div>
+                        </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
 {% endblock %}
+
