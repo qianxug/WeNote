@@ -2,13 +2,33 @@
 {% load static %}
 
 {% block content %}
-    <div class="main">
-        <a href="/lectures/1/">Note name: {{ selectedNote.name }}</a>
-        <p>Note author: {{ selectedNote.author }}</p>
-        <p>Note description: {{ selectedNote.description }}</p>
-        <h1>Timestamp: {{ selectedNote.timestamp }}</h1>
-        <h2>Written or typed: {{ selectedNote.format }}</h2>
-        <h3>How many votes: {{ selectedNote.numVotes }}</h3>
-        <iframe src="{% static 'lectures/' %}{{selectedNote.pdf}}" width='800px' height="1000px"></iframe>
+<div class="main">
+    <p class="noteAuthor">{{ selectedNote.author }}'s Lecture 10 Note</p>
+    <div class="noteCardNote">
+        <div class="container" background="white">
+            <h2 class="noteTitle">{{ selectedNote.name }}</h2>
+            <p class="noteDescription">{{ selectedNote.description }}</p>
+            <button class="noteButton" ><b>{{ selectedNote.format }}</b></button>
+            <div height="50px"></div>
+            <br>
+            <div class="cardInnerNote">
+                <div class="container">
+                    <!-- <a href="/lectures/1/">Note name: {{ selectedNote.name }}</a> -->
+
+                    
+                    <!-- <h2>Written or typed: {{ selectedNote.format }}</h2> -->
+                    
+                    <!-- <h3>How many votes: {{ selectedNote.numVotes }}</h3> -->
+                    <iframe src="{% static 'lectures/' %}{{selectedNote.pdf}}" width='790px' height="1040px"></iframe>
+       
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+
+
+
+
 {% endblock %}  

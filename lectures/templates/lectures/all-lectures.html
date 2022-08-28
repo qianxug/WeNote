@@ -3,13 +3,34 @@
 {% block content %}
     <div class="main"> 
     <h2>Math 137 - Sec 003</h2>
-    {% for i in selectedLecture %}
+
         <div class="card">
           <div class="container">
-            <a href="/lectures/1/"><b>{{ i.name }} </b></a> 
-            <p style="font-size: 20px">{{i.numNotes}} Notes Posted</p> 
+            <a class="noteTitle" href="/lectures/1/"><b>Lecture 10 - June 1, 2022, 12:30 pm</b></a> 
+            <p style="font-size: 20px">1 note posted</p> 
           </div>
         </div>
-    {% endfor %}
+        <br>
+        <div class="card">
+          <div class="container">
+            <a class="noteTitle" href="/lectures/1/"><b>Lecture 9 - May 28, 2022, 12:30 pm</b></a> 
+            <p style="font-size: 20px">3 notes posted</p> 
+          </div>
+        </div>
+        <br>
+        <div class="card">
+          <div class="container">
+            <a class="noteTitle" href="/lectures/1/"><b>Lecture 8 - May 26, 2022, 12:30 pm</b></a> 
+            <p style="font-size: 20px">0 notes posted</p> 
+          </div>
+        </div>
+        <br>
+        <div class="card">
+          <div class="container">
+            <a class="noteTitle" href="/lectures/1/"><b>Lecture 7 - May 24, 2022, 12:30 pm</b></a> 
+            <p style="font-size: 20px">2 notes posted</p> 
+          </div>
+        </div>
+        <br>
     </div>
 {% endblock %}
